@@ -1,0 +1,25 @@
+#sdk: "C:/MotorolaRhoMobileSuite2.0.5/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.3.3"
+sdkversion: 3.3.3
+name: TestScroll
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.testscroll
+  BundleURLScheme: testscroll
+wp:
+  productid: '95cdfc90-f344-012f-d338-0fb4c1cadeaf'
+symbian:
+  uid: '0xe4fd7763'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]
+app_type: "rhoelements"

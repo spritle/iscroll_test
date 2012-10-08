@@ -1,0 +1,63 @@
+<div data-role="page" data-theme="a">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @product.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content" data-iscroll="">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @product.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="product[name]" class="fieldLabel">Name</label>
+            <input type="text" id="product[name]" name="product[name]" <%= placeholder("Name") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[price]" class="fieldLabel">Price</label>
+            <input type="text" id="product[price]" name="product[price]" <%= placeholder("Price") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[quantity]" class="fieldLabel">Quantity</label>
+            <input type="text" id="product[quantity]" name="product[quantity]" <%= placeholder("Quantity") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[tax]" class="fieldLabel">Tax</label>
+            <input type="text" id="product[tax]" name="product[tax]" <%= placeholder("Tax") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[discount]" class="fieldLabel">Discount</label>
+            <input type="text" id="product[discount]" name="product[discount]" <%= placeholder("Discount") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="product[barcode]" class="fieldLabel">Barcode</label>
+            <input type="text" id="product[barcode]" name="product[barcode]" <%= placeholder("Barcode") %> />
+          </div>
+  
+          <div data-role="fieldcontain">
+            <label for="product[manufacturer]" class="fieldLabel">Manufacturer</label>
+            <input type="text" id="product[manufacturer]" name="product[manufacturer]" <%= placeholder("Manufacturer") %> />
+          </div>
+          
+          <div data-role="fieldcontain">
+            <label for="product[manufacturer_address]" class="fieldLabel">Manufacturer Address</label>
+            <input type="text" id="product[manufacturer_address]" name="product[manufacturer_address]" <%= placeholder("Manufacturer Address") %> />
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="product[manufacturer_date]" class="fieldLabel">Manufacturer Date</label>
+            <input type="text" id="product[manufacturer_date]" name="product[manufacturer_date]" <%= placeholder("Manufacturer Date") %> />
+          </div>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
